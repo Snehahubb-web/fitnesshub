@@ -1,0 +1,129 @@
+/* general styles css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    background: #b7aecf;
+    color: #000000;
+}
+
+/* Mobile First View */
+header {
+    background-color: #d8d0f0;
+    color: #000000;
+    padding: 1.2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+    color: #000000;
+    float: left;
+    text-align: left;
+}
+
+
+/* --- HAMBURGER MENU --- */
+#hamburger_image {
+    background-color: #0a3838;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 10%;
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+    cursor: pointer;
+}
+
+#hamburger_icon {
+    width: 28px;
+    height: auto;
+}
+
+#hamburger_checkbox {
+    display: none;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    background: #4f6b7a;
+}
+
+nav ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+}
+
+nav a {
+    display: block;
+    padding: 0.9rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    transition: background 0.3s ease;
+}
+
+nav a:hover,
+nav a.active,
+nav a.active_nav {
+    background: #a37396;
+    color: #20033e;
+    outline: none;
+}
+
+/* Show menu when hamburger is checked */
+#hamburger_checkbox:checked ~ nav ul {
+    display: flex;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #9f9090;
+    color: #340f0f;
+    text-align: center;
+    padding: 30px;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    color: #1a0a3a;
+}
+
+
+/* DESKTOP NAVIGATION*/
+
+@media only screen and (min-width: 768px) {
+
+    /* Desktop nav layout */
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav a {
+        border-bottom: none;
+        padding: 1rem 1.5rem;
+    }
+
+    #hamburger_menu {
+        display: none;
+    }
+}

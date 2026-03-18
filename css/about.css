@@ -1,0 +1,163 @@
+/* Mobile First View */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    background: #b7aecf;
+    color: #1d1a1a;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgb(183, 174, 207);
+    color: #8a3c3c;
+    padding: 1.2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+    color: #913131;
+    float: left;
+    text-align: left;
+}
+
+/* HAMBURGER MENU */
+#hamburger_menu {
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+    cursor: pointer;
+}
+
+#hamburger_icon {
+    width: 28px;
+    height: auto;
+}
+
+#hamburger_checkbox {
+    display: none;
+}
+
+/*NAVIGATION */
+nav {
+    background: #222;
+    clear: both;
+}
+
+nav ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+}
+
+nav a {
+    display: block;
+    padding: 0.9rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    transition: background 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background: #857e83;
+    color: #20033e;
+}
+
+/* Show menu when hamburger is checked */
+#hamburger_checkbox:checked ~ nav ul {
+    display: flex;
+}
+
+/* ABOUT PAGE CONTENT*/
+
+main {
+    padding: 1.5rem;
+}
+
+/* Each section card */
+.container {
+    background: #d6d1e1;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Section headings */
+.container h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #5e28bc;
+    margin-bottom: 1rem;
+}
+
+/* Paragraphs */
+.container p,
+.container li {
+    font-size: 1rem;
+    color: #1d1a1a;
+}
+
+.container ul {
+    padding-left: 1.2rem;
+}
+
+/* FOOTER */
+footer {
+    background: #9f9090;
+    color: #340f0f;
+    text-align: center;
+    padding: 30px;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 768px) {
+
+    /* Desktop nav layout */
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav a {
+        border-bottom: none;
+        padding: 1rem 1.5rem;
+    }
+
+    #hamburger_menu {
+        display: none;
+    }
+
+    main {
+        max-width: 900px;
+        margin: 2rem auto;
+    }
+
+    .container {
+        padding: 2rem;
+    }
+
+    .container h2 {
+        font-size: 1.9rem;
+    }
+
+    .container p,
+    .container li {
+        font-size: 1.1rem;
+    }
+}
